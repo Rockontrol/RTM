@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.chonger.ui.activity.calendar.MainActivity"
+    android:orientation="vertical">
+    
+    <fragment 
+        android:id="@+id/frament_cal"
+        android:name="org.chonger.ui.activity.Cal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        />
+     <fragment 
+        android:id="@+id/frament_project"
+        android:name="org.chonger.ui.activity.Project"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        />
+      <fragment 
+        android:id="@+id/frament_oa"
+        android:name="org.chonger.ui.activity.Oa"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        />
+      
+      <TextView 
+          android:layout_width="fill_parent"
+          android:background="@drawable/barsp"
+          android:layout_height="9px"/>
+      
+      <RadioGroup 
+          android:id="@+id/bottomGroup"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.5"
+          android:orientation="horizontal"
+          android:layout_marginLeft="5px"
+          android:layout_marginRight="5px">
+          
+          
+          <RadioButton 
+              android:id="@+id/rbCal"
+              android:checked="true"
+              style="@style/rbtn_main"
+              android:drawableTop="@drawable/rbtn_cal_selector"
+              android:text="计划"/>
+          <RadioButton 
+              android:id="@+id/rbProject"
+              style="@style/rbtn_main"
+               android:drawableTop="@drawable/rbtn_project_selector"
+               android:text="报工"/>
+          <RadioButton 
+              android:id="@+id/rbOa"
+              style="@style/rbtn_main"
+               android:drawableTop="@drawable/rbtn_oa_selector"
+               android:text="OA"/>
+          <RadioButton 
+              android:id="@+id/rbmsg"
+              android:checked="true"
+              style="@style/rbtn_main"
+              android:drawableTop="@drawable/rbtn_msg_selector"
+              android:text="RTX"/>
+          <RadioButton 
+              android:id="@+id/rbsetting"
+              style="@style/rbtn_main"
+               android:drawableTop="@drawable/rbtn_setting_selector"
+               android:text="设置"/>
+      </RadioGroup>
+      
+</LinearLayout >
+
