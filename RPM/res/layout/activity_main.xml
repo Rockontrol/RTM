@@ -58,7 +58,7 @@
               android:id="@+id/rbOa"
               style="@style/rbtn_main"
                android:drawableTop="@drawable/rbtn_oa_selector"
-               android:text="OA"/>
+               android:text="通知"/>
           <RadioButton 
               android:id="@+id/rbmsg"
               android:checked="true"
