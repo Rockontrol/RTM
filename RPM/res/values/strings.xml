@@ -2,5 +2,7 @@
 <resources>
 
     <string name="app_name">Rockontrol</string>
+    <string name="title_activity_welcom">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

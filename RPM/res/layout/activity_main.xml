@@ -15,7 +15,7 @@
         />
      <fragment 
         android:id="@+id/frament_project"
-        android:name="org.chonger.ui.activity.Project"
+        android:name="org.chonger.ui.activity.VProjectFragment"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="10"
@@ -61,15 +61,14 @@
                android:text="通知"/>
           <RadioButton 
               android:id="@+id/rbmsg"
-              android:checked="true"
               style="@style/rbtn_main"
               android:drawableTop="@drawable/rbtn_msg_selector"
               android:text="RTX"/>
           <RadioButton 
-              android:id="@+id/rbsetting"
+              android:id="@+id/rbmenus"
               style="@style/rbtn_main"
-               android:drawableTop="@drawable/rbtn_setting_selector"
-               android:text="设置"/>
+               android:drawableTop="@drawable/rbtn_menus_selector"
+               android:text="菜单"/>
       </RadioGroup>
       
 </LinearLayout >

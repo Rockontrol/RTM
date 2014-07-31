@@ -52,7 +52,7 @@ public class MainActivity extends FragmentActivity {
 		rb_OA=(RadioButton)findViewById(R.id.rbOa);
 		rb_Rtx=(RadioButton)findViewById(R.id.rbmsg);
 		//rb_package=(RadioButton)findViewById(R.id.rbpackage);
-		rb_setting=(RadioButton)findViewById(R.id.rbsetting);
+		rb_setting=(RadioButton)findViewById(R.id.rbmenus);
 		
 		bottomRg.setOnCheckedChangeListener(new OnCheckedChangeListener(){
 			
