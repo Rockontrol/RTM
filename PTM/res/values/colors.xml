@@ -1,25 +1,14 @@
 <resources>
-
-    <color name="app_bg">#f6f6f6</color>
+	<color name="app_background">#f8f8f8</color>
     <color name="transparent">#00000000</color>
     <color name="gray">#808080</color>
     <color name="lightGray">#D3D3D3</color>
     <color name="black">#000000</color>
     <color name="red">#FF0000</color>
     <color name="white">#FFFFFF</color>
-    <color name="progress_bg">#C8C8C8</color>
     <color name="steelBlue">#4682B4</color>
-    <color name="title_color">#76b63d</color>
-    <color name="column_bg">#7db93d</color>
-    <color name="column_text">#78b74d</color>
-    <color name="left_tab_bg">#22c85555</color>
-    <color name="backColor">#6cab13</color>
-    <color name="btnScanNormal">#e9ba16</color>
-    <color name="btnScanPressed">#facd21</color>
-    <color name="itemBgNormal">#ffffff</color>
-    <color name="itemBgPressed">#f0f0f0</color>
-    <color name="ComplaintNormal">#f15353</color>
-    <color name="ComplaintPressed">#fb6868</color>
-    <color name="content_color">#585858</color>
 	
+    <!-- 主题使用颜色 -->
+    <color name="mainBlue">#0054a5</color>
+    
 </resources>

@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#f8f8f8"
+    android:background="@color/app_background"
     >
     
     <fragment 
@@ -44,7 +44,7 @@
        <View 
           android:layout_width="match_parent"
           android:layout_height="1dp"
-          android:background="#0054a5"/>
+          android:background="@color/mainBlue"/>
       
       <RadioGroup 
           android:id="@+id/bottomGroup"
@@ -58,33 +58,33 @@
               android:id="@+id/rdobtn_calendar"
               style="@style/tabBtn"
               android:checked="true"
-              android:drawableTop="@drawable/icon_calendar_hover"
+              android:drawableTop="@drawable/btn_main_calendar"
               android:text="@string/menu_calendar" 
               />
 
           <RadioButton 
               android:id="@+id/rdobtn_task"
               style="@style/tabBtn"
-              android:drawableTop="@drawable/icon_task"
+              android:drawableTop="@drawable/btn_main_task"
               android:text="@string/menu_task"
               />
           
           <RadioButton 
               android:id="@+id/rdobtn_mail"
               style="@style/tabBtn"
-              android:drawableTop="@drawable/icon_mail"
+              android:drawableTop="@drawable/btn_main_mail"
               android:text="@string/menu_mail"
               />
           <RadioButton 
               android:id="@+id/rdobtn_message"
               style="@style/tabBtn"
-              android:drawableTop="@drawable/icon_message"
+              android:drawableTop="@drawable/btn_main_message"
               android:text="@string/menu_message"
               />
           <RadioButton 
               android:id="@+id/rdobtn_setting"
               style="@style/tabBtn"
-              android:drawableTop="@drawable/icon_setting"
+              android:drawableTop="@drawable/btn_main_setting"
               android:text="@string/menu_setting"
               />
       </RadioGroup>
