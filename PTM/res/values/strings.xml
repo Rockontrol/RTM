@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">R-Zone</string>
+    
+	<string name="menu_calendar">日历</string>
+    <string name="menu_task">报工</string>
+    <string name="menu_mail">信息</string>
+    <string name="menu_message">聊天</string>
+    <string name="menu_setting">设置</string>
+    
+</resources>
