@@ -17,7 +17,7 @@ public class LayoutMainActivity extends BaseFragmentActivity  {
 		this.addTabs(R.id.frament_task,R.id.rdobtn_task);
 		this.addTabs(R.id.frament_mail,R.id.rdobtn_mail);
 		this.addTabs(R.id.frament_message,R.id.rdobtn_message);
-		this.addTabs(R.id.frament_setting,R.id.rdobtn_setting);
+		this.addTabs(R.id.frament_setting,R.id.rdobtn_more);
 		
 		this.show();
 		

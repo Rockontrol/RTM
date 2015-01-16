@@ -5,8 +5,8 @@
     
 	<string name="menu_calendar">日历</string>
     <string name="menu_task">报工</string>
-    <string name="menu_mail">信息</string>
-    <string name="menu_message">聊天</string>
-    <string name="menu_setting">设置</string>
+    <string name="menu_mail">邮件</string>
+    <string name="menu_message">信息</string>
+    <string name="menu_more">更多</string>
     
 </resources>

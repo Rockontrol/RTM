@@ -2,7 +2,8 @@
 <resources>
     <!-- 标题栏属性定义 -->
     <dimen name="title_height">50dp</dimen><!-- 定义标题栏高度 -->
-    <dimen name="title_back_width">60dp</dimen>
+    
+    <dimen name="title_button_boxWidth">60dp</dimen>
     <dimen name="title_button_padding1">10dp</dimen>
     <dimen name="title_button_padding2">5dp</dimen>
     

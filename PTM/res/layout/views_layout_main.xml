@@ -82,10 +82,10 @@
               android:text="@string/menu_message"
               />
           <RadioButton 
-              android:id="@+id/rdobtn_setting"
+              android:id="@+id/rdobtn_more"
               style="@style/tabBtn"
-              android:drawableTop="@drawable/btn_main_setting"
-              android:text="@string/menu_setting"
+              android:drawableTop="@drawable/btn_main_more"
+              android:text="@string/menu_more"
               />
       </RadioGroup>
 </LinearLayout>

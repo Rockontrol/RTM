@@ -7,8 +7,8 @@
     android:orientation="vertical">
     
     <RelativeLayout
-        android:id="@+id/rlBack"
-        android:layout_width="@dimen/title_back_width"
+        android:id="@+id/tlButtonBox"
+        android:layout_width="@dimen/title_button_boxWidth"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
@@ -17,11 +17,6 @@
         android:paddingRight="@dimen/title_button_padding1"
         android:paddingTop="@dimen/title_button_padding2" >
 
-        <ImageView
-            android:id="@+id/ivBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true" />
     </RelativeLayout>
     
     <TextView 
@@ -31,7 +26,19 @@
         android:layout_centerInParent="true"
         android:textStyle="bold"
         android:textSize="@dimen/text_size_20"
-        android:text=""
-        android:textColor="#FFFFFF"/>
+        android:textColor="@color/mainBlue"/>
+    
+    <RelativeLayout
+        android:id="@+id/trButtonBox"
+        android:layout_width="@dimen/title_button_boxWidth"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingBottom="@dimen/title_button_padding2"
+        android:paddingLeft="@dimen/title_button_padding1"
+        android:paddingRight="@dimen/title_button_padding1"
+        android:paddingTop="@dimen/title_button_padding2" >
+
+    </RelativeLayout>
     
 </RelativeLayout>

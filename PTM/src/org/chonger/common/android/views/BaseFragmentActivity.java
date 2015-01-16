@@ -11,7 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.Window;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.RelativeLayout;
@@ -20,7 +20,7 @@ import android.widget.TextView;
 /**
  * 基础Fragment布局管理器
  * @author Daniel
- *
+ * modify 2015-01-16	修改按钮逻辑，框架中只预留按钮位置，由每个使用的界面自己负责按钮的设置，框架只调用按钮函数进行显示，有则显示，为null则不显示。
  */
 public abstract class BaseFragmentActivity extends FragmentActivity {
 	
@@ -42,8 +42,10 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 	
 	private RadioGroup rdoBtns;
 	private TextView titleText;
-	private ImageView imgView;
-	private RelativeLayout rLayout;
+	private RelativeLayout rtlButtonBox,rtrButtonBox;
+//	private Button leftButton,rightButton;
+	
+	
 	
 	private String key;
 	
@@ -57,26 +59,43 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 		this.setContentView(R.layout.common_views_title);
 		this.getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.common_views_title);
 		titleText = (TextView) findViewById(R.id.titleText);
-		rLayout=(RelativeLayout)findViewById(R.id.rlBack);
+		
+		rtlButtonBox=(RelativeLayout)findViewById(R.id.tlButtonBox);
+		rtrButtonBox=(RelativeLayout)findViewById(R.id.trButtonBox);
+		
+//		leftButton=(Button)findViewById(R.id.tlButton);
+//		rightButton=(Button)findViewById(R.id.trButton);
 		
 		//初始化布局管理器
 		fragmentManager=this.getSupportFragmentManager();
 		
-		backButtonVisibility(false);
-		
+//		backButtonVisibility(false);
 		//dataSession=TempDataUtils.getDataSession();
+		
+//		setLeftButton();
 	}
+	
+//	public void setLeftButton()
+//	{
+//		leftButton.setText("未登录");
+//		rightButton.setBackgroundResource(R.drawable.icon_add);
+//		
+//	}
+	
+	
+	
+	
 	
 	/**
 	 * 设置返回按钮是否启用
 	 * @param enable
 	 */
-	public void backButtonVisibility(boolean enable)
-	{
-		if(rLayout==null)
-			rLayout=(RelativeLayout)findViewById(R.id.rlBack);
-		rLayout.setVisibility(enable?View.VISIBLE:View.INVISIBLE);
-	}
+//	public void backButtonVisibility(boolean enable)
+//	{
+//		if(rLayout==null)
+//			rLayout=(RelativeLayout)findViewById(R.id.rlBack);
+//		rLayout.setVisibility(enable?View.VISIBLE:View.INVISIBLE);
+//	}
 	
 	/**
 	 * 将指定的{@link BaseFragment}元素id绑定到指定的btnid按钮上
@@ -98,6 +117,9 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 		for(BaseFragment fragmentElement : fragments.values())
 		{
 			fragmentElement.hide();
+			//Daniel 内容在切换的时候进行按钮的切换，先移除指定功能按钮
+			rtlButtonBox.removeAllViews();
+			rtrButtonBox.removeAllViews();
 			fragmentTransaction.hide(fragmentElement);
 		}
 	}
@@ -126,6 +148,16 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 			String _text=fragmentElement.setTitle();
 			titleText.setText(_text);
 			fragmentElement.show();
+			//Daniel 获取指定的功能按钮进行显示
+			if(fragmentElement.btnLeftButton!=null)
+			{
+				this.rtlButtonBox.addView(fragmentElement.btnLeftButton);
+			}
+			if(fragmentElement.btnRightButton!=null)
+			{
+				this.rtrButtonBox.addView(fragmentElement.btnRightButton);
+			}
+			
 			fragmentTransaction.show(fragmentElement).commit();
 		}
 	}

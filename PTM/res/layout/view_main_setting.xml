@@ -4,5 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
+    <Button 
+        android:background="@drawable/image_btn_background"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:text="测试按钮宽度"/>
 
 </LinearLayout>

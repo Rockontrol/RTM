@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 public class MailFragment extends BaseFragment {
 	
@@ -20,5 +21,13 @@ public class MailFragment extends BaseFragment {
 	public String setTitle() {
 		return "ÓÊ¼þ";
 	}
+
+	@Override
+	public void initButton() {
+		this.btnRightButton=this.createButton();
+		this.btnRightButton.setText("Ð´ÓÊ¼þ");		
+	}
+
+	
 	
 }

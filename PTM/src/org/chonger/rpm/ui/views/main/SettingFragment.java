@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 public class SettingFragment extends BaseFragment {
 	
@@ -20,5 +21,12 @@ public class SettingFragment extends BaseFragment {
 	public String setTitle() {
 		return "…Ë÷√";
 	}
+
+	@Override
+	public void initButton() {
+		
+	}
+	
+	
 	
 }
