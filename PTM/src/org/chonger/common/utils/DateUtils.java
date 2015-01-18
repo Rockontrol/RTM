@@ -4,21 +4,21 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * æ—¥æœŸå¸¸ç”¨è¾…åŠ©å‡½æ•°
+ * ÈÕÆÚ³£ÓÃ¸¨Öúº¯Êı
  * @author Daniel
  *
  */
 public class DateUtils {
-	/**å¸¸ç”¨æ ¼å¼åŒ–å­—ç¬¦ä¸²ï¼šyyyy-MM-dd*/
+	/**³£ÓÃ¸ñÊ½»¯×Ö·û´®£ºyyyy-MM-dd*/
 	public static final String FORMAT_STRING_TYPE1="yyyy-MM-dd";
-	/**å¸¸ç”¨æ ¼å¼åŒ–å­—ç¬¦ä¸²ï¼šyyyyå¹´MMæœˆddæ—¥*/
-	public static final String FORMAT_STRING_TYPE2="yyyyå¹´MMæœˆddæ—¥";
-	/**å¸¸ç”¨æ ¼å¼åŒ–å­—ç¬¦ä¸²ï¼šyyyyå¹´MMæœˆ*/
-	public static final String FORMAT_STRING_TYPE3="yyyyå¹´MMæœˆ";
+	/**³£ÓÃ¸ñÊ½»¯×Ö·û´®£ºyyyyÄêMMÔÂddÈÕ*/
+	public static final String FORMAT_STRING_TYPE2="yyyyÄêMMÔÂddÈÕ";
+	/**³£ÓÃ¸ñÊ½»¯×Ö·û´®£ºyyyyÄêMMÔÂ*/
+	public static final String FORMAT_STRING_TYPE3="yyyyÄêMMÔÂ";
 	
 	
 	/**
-	 * ç”¨è‡ªå®šä¹‰çš„æ¨¡æ¿æ ¼å¼åŒ–å½“å‰æ—¥æœŸ
+	 * ÓÃ×Ô¶¨ÒåµÄÄ£°å¸ñÊ½»¯µ±Ç°ÈÕÆÚ
 	 * @param format
 	 * @return
 	 */
