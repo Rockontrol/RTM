@@ -51,12 +51,14 @@ public abstract class BaseFragment extends Fragment  {
 		//dataSession=TempDataUtils.getDataSession();
 	}
 	
+	
+	
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		this.initButton();
+		//this.initButton(); bug:FActivity初始化Show的时候无法调用，show函数调用比该函数先执行
 	}
-
+	
 	public View findViewById(int id)
 	{
 		return this.getView().findViewById(id);

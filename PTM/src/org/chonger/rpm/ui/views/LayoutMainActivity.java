@@ -3,7 +3,10 @@ package org.chonger.rpm.ui.views;
 import org.chonger.common.android.views.BaseFragmentActivity;
 import org.chonger.rpm.R;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.AttributeSet;
+import android.view.View;
 
 
 
@@ -26,13 +29,22 @@ public class LayoutMainActivity extends BaseFragmentActivity  {
 		this.addTabs(R.id.frament_vp_login,R.id.frament_vp_login);
 		this.addTabs(R.id.frament_task_add,R.id.frament_task_add);
 		
-		this.show();
-		
 		this.bindBtns(R.id.bottomGroup);
 		
 		_this=this;
+		
+		this.show();
 	}
 	
+	
+	
+	@Override
+	protected void onStart() {
+		super.onStart();
+	}
+
+
+
 	public static LayoutMainActivity getThis()
 	{
 		return _this;

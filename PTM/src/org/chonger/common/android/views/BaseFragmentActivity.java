@@ -130,6 +130,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 		BaseFragment fragmentElement = (BaseFragment)fragmentManager.findFragmentById(id);
 		if(fragmentElement!=null)
 		{
+			fragmentElement.initButton();
 			fragments.put(id+"", fragmentElement);
 			btns.put(btnid+"",id+"");
 		}
@@ -191,7 +192,9 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 	public void show()
 	{
 		if(fragments.size()>0)
+		{
 			show(Integer.parseInt(fragments.keySet().toArray()[0].toString()));
+		}
 	}
 	
 	/**
