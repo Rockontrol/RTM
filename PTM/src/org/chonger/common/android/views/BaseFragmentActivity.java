@@ -5,12 +5,15 @@ import java.util.LinkedHashMap;
 
 import org.chonger.rpm.R;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -43,7 +46,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 	private RadioGroup rdoBtns;
 	private TextView titleText;
 	private RelativeLayout rtlButtonBox,rtrButtonBox;
-//	private Button leftButton,rightButton;
+	private Button leftButton,rightButton;
 	
 	
 	
@@ -63,6 +66,9 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 		rtlButtonBox=(RelativeLayout)findViewById(R.id.tlButtonBox);
 		rtrButtonBox=(RelativeLayout)findViewById(R.id.trButtonBox);
 		
+		rtlButtonBox.setOnClickListener(titleButtonClickListener);
+		rtrButtonBox.setOnClickListener(titleButtonClickListener);
+		
 //		leftButton=(Button)findViewById(R.id.tlButton);
 //		rightButton=(Button)findViewById(R.id.trButton);
 		
@@ -74,6 +80,24 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 		
 //		setLeftButton();
 	}
+	
+	//按钮框事件传递
+	private OnClickListener titleButtonClickListener=new OnClickListener(){
+		@Override
+		public void onClick(View v) {
+			switch(v.getId())
+			{
+				case R.id.tlButtonBox:
+					if(leftButton!=null)
+						leftButton.performClick();
+					break;
+				case R.id.trButtonBox:
+					if(rightButton!=null)
+						rightButton.performClick();
+					break;
+			}
+		}
+	};
 	
 //	public void setLeftButton()
 //	{
@@ -111,8 +135,43 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 		}
 	}
 	
+	//第三方帧显示，不替换Key
+	public void ShowOther(int id)
+	{
+		hiden();
+		BaseFragment fragmentElement=(BaseFragment)fragmentManager.findFragmentById(id);
+		String _text=fragmentElement.setTitle();
+		titleText.setText(_text);
+		fragmentElement.show();
+		if((leftButton=fragmentElement.btnLeftButton)!=null)
+		{
+			leftButton.setId(R.id.title_button_left_id);
+			this.rtlButtonBox.addView(fragmentElement.btnLeftButton);
+		}
+		if((rightButton=fragmentElement.btnRightButton)!=null)
+		{
+			rightButton.setId(R.id.title_button_right_id);
+			this.rtrButtonBox.addView(fragmentElement.btnRightButton);
+		}
+		fragmentTransaction.show(fragmentElement).commit();
+	}
+	
+	//取消
+	public void CancelOther()
+	{
+		show(Integer.parseInt(key));
+	}
+	
+	/**
+	 * 
+	 */
 	private void hiden()
 	{
+		//Daniel 2015-01-18	1:添加界面切换隐藏输入法
+		InputMethodManager imm = ( InputMethodManager )this.getSystemService( Context.INPUT_METHOD_SERVICE ); 
+		if(imm.isActive())
+			imm.hideSoftInputFromWindow(this.titleText.getWindowToken(), 0);
+		//隐藏界面
 		fragmentTransaction=fragmentManager.beginTransaction();
 		for(BaseFragment fragmentElement : fragments.values())
 		{
@@ -122,6 +181,8 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 			rtrButtonBox.removeAllViews();
 			fragmentTransaction.hide(fragmentElement);
 		}
+		
+
 	}
 	
 	/**
@@ -149,12 +210,14 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 			titleText.setText(_text);
 			fragmentElement.show();
 			//Daniel 获取指定的功能按钮进行显示
-			if(fragmentElement.btnLeftButton!=null)
+			if((leftButton=fragmentElement.btnLeftButton)!=null)
 			{
+				leftButton.setId(R.id.title_button_left_id);
 				this.rtlButtonBox.addView(fragmentElement.btnLeftButton);
 			}
-			if(fragmentElement.btnRightButton!=null)
+			if((rightButton=fragmentElement.btnRightButton)!=null)
 			{
+				rightButton.setId(R.id.title_button_right_id);
 				this.rtrButtonBox.addView(fragmentElement.btnRightButton);
 			}
 			
@@ -210,5 +273,22 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 				}
 			});
 		}
-	}	
+	}
+	
+	//标题栏按钮点击事件
+//	private OnClickListener buttonOnClickListener=new OnClickListener(){
+//		@Override
+//		public void onClick(View v) {
+//			switch(v.getId())
+//			{
+//				case R.id.title_button_left_id:
+//					
+//					break;
+//				case R.id.title_button_right_id:
+//					LayoutMainActivity.getThis().ShowOther(R.id.frament_task_add);
+//					break;
+//			}
+//		}
+//	};
+	
 }

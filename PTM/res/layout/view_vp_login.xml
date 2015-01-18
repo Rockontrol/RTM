@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="10"
+    >
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/module_vp_logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp" 
+        />
+	
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
+        
+        <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:orientation="horizontal">	        
+	        <TextView 
+	            android:layout_height="match_parent"
+	            android:layout_width="match_parent"
+	            android:layout_weight="4"
+	            android:gravity="center|right"
+	            android:text="@string/vp_login_input_nameLabel"
+	            android:textColor="#000000"/>
+	        
+	        <EditText
+	            android:id="@+id/vp_input_txtLoginName"
+	            android:layout_height="match_parent"
+	            android:layout_width="match_parent"
+	            android:layout_weight="1"
+	            android:singleLine="true"
+	            android:imeOptions="actionNext">
+	        </EditText>	    
+		</LinearLayout>
+        
+        <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:orientation="horizontal">	        
+	        <TextView 
+	            android:layout_height="match_parent"
+	            android:layout_width="match_parent"
+	            android:layout_weight="4"
+	            android:gravity="center|right"
+	            android:text="@string/vp_login_input_pwdLabel"
+	            android:textColor="#000000"/>   
+	        <EditText 
+	            android:id="@+id/vp_input_txtLoginPwd"
+	            android:layout_height="match_parent"
+	            android:layout_width="match_parent"
+	            android:layout_weight="1"
+	            android:singleLine="true" 
+	            android:inputType="textPassword">
+	            <requestFocus />
+	      	</EditText>	    
+		</LinearLayout>
+    </LinearLayout>
+    
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        style="@style/defaultBtn"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/vp_login_btn_login"
+        />
+    
+</LinearLayout>

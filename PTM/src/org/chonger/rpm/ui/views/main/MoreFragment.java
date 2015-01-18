@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class SettingFragment extends BaseFragment {
+public class MoreFragment extends BaseFragment {
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -19,7 +19,7 @@ public class SettingFragment extends BaseFragment {
 	
 	@Override
 	public String setTitle() {
-		return "…Ë÷√";
+		return this.getString(R.string.menu_more);
 	}
 
 	@Override

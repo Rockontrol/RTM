@@ -19,7 +19,7 @@ public class MessageFragment extends BaseFragment {
 	
 	@Override
 	public String setTitle() {
-		return "ÏûÏ¢";
+		return this.getString(R.string.menu_message);
 	}
 
 	@Override

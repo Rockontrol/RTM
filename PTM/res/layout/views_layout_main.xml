@@ -6,6 +6,21 @@
     >
     
     <fragment 
+        android:id="@+id/frament_vp_login"
+        android:name="org.chonger.rpm.ui.views.vp.LoginFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        />
+    <fragment 
+        android:id="@+id/frament_task_add"
+        android:name="org.chonger.rpm.ui.views.task.AddTaskFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        />
+    
+    <fragment 
         android:id="@+id/frament_calendar"
         android:name="org.chonger.rpm.ui.views.main.CalendarFragment"
         android:layout_width="fill_parent"
@@ -34,8 +49,8 @@
         android:layout_weight="10"
         />
       <fragment 
-        android:id="@+id/frament_setting"
-        android:name="org.chonger.rpm.ui.views.main.SettingFragment"
+        android:id="@+id/frament_more"
+        android:name="org.chonger.rpm.ui.views.main.MoreFragment"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="10"

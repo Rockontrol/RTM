@@ -3,10 +3,37 @@
 
     <string name="app_name">R-Zone</string>
     
+    <!-- 常用 -->
+    <string name="common_enter">确定</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_add">新增</string>
+    <string name="common_save">保存</string>
+    <string name="common_delete">删除</string>
+    <string name="common_edit">修改</string>
+    
+    <!-- 主菜单 -->
 	<string name="menu_calendar">日历</string>
     <string name="menu_task">报工</string>
     <string name="menu_mail">邮件</string>
     <string name="menu_message">信息</string>
     <string name="menu_more">更多</string>
+    
+    
+    <!-- 报工-->
+    <string name="vp_login_title">登陆VP系统</string>
+    <string name="vp_login_input_nameLabel">登陆账户：</string>
+    <string name="vp_login_input_pwdLabel">登陆密码：</string>
+    <string name="vp_login_btn_login">登陆系统</string>
+    
+    
+    <!-- 任务添加 -->
+    <string name="task_add_title">新增任务项</string>
+    <string name="task_add_projectNameLabel">报工项目：</string>
+    <string name="task_add_projectFinishValueLabel">项目进度：</string>
+    <string name="task_add_projectFinishDateLabel">预设完成：</string>
+    <string name="task_add_projectTimeLabel">报工工时：</string>
+    <string name="task_add_projectTimeWorkLabel">正常：</string>
+    <string name="task_add_projectTimeWorkOverTimeLabel">加班：</string>
+    <string name="task_add_projectDateLabel">报工日期：</string>
     
 </resources>

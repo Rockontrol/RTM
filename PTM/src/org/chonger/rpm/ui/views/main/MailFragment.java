@@ -19,7 +19,7 @@ public class MailFragment extends BaseFragment {
 	
 	@Override
 	public String setTitle() {
-		return "ÓÊ¼ş";
+		return this.getString(R.string.menu_mail);
 	}
 
 	@Override

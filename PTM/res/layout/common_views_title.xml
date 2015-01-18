@@ -12,11 +12,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:paddingBottom="@dimen/title_button_padding2"
-        android:paddingLeft="@dimen/title_button_padding1"
-        android:paddingRight="@dimen/title_button_padding1"
-        android:paddingTop="@dimen/title_button_padding2" >
-
+        android:gravity="center" >
+		
     </RelativeLayout>
     
     <TextView 
@@ -34,10 +31,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:paddingBottom="@dimen/title_button_padding2"
-        android:paddingLeft="@dimen/title_button_padding1"
-        android:paddingRight="@dimen/title_button_padding1"
-        android:paddingTop="@dimen/title_button_padding2" >
+        android:gravity="center">
 
     </RelativeLayout>
     

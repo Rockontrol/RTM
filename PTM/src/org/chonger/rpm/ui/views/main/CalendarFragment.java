@@ -19,7 +19,7 @@ public class CalendarFragment extends BaseFragment {
 
 	@Override
 	public String setTitle() {
-		return "ÈÕÀú";
+		return this.getString(R.string.menu_calendar);
 	}
 
 	@Override
