@@ -1,6 +1,9 @@
 package org.chonger.rpm.ui.views.main;
 
+import java.util.Date;
+
 import org.chonger.common.android.views.BaseFragment;
+import org.chonger.common.utils.CalendarUtils;
 import org.chonger.common.utils.DateUtils;
 import org.chonger.rpm.R;
 
@@ -9,6 +12,10 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.RelativeSizeSpan;
+import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,9 +87,7 @@ public class CalendarFragment extends BaseFragment {
 		{
 			inflater=LayoutInflater.from(context);
 			
-			//≥ı ºªØ≤‚ ‘
-			for(int i=1;i<=31;i++)
-				dayNumber[i-1]=i+"";
+			dayNumber=CalendarUtils.getCalendarData(new Date());
 		}
 		
 		@Override
@@ -106,9 +111,25 @@ public class CalendarFragment extends BaseFragment {
 			if(convertView==null)
 				convertView=inflater.inflate(R.layout.view_calendar_item,null);
 			TextView textView = (TextView) convertView.findViewById(R.id.txtDate);  
-			textView.setText(dayNumber[position]);
-			textView.setTextColor(Color.GRAY);
 			
+//			String v="≥ı“ª";
+			String d=dayNumber[position].split(" ")[0];
+			String t=dayNumber[position].split(" ")[1];
+			if(d!=null)
+			{
+//				SpannableString sp = new SpannableString(d+"\n"+v);  
+//				sp.setSpan(new StyleSpan(android.graphics.Typeface.BOLD), 0, d.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//				sp.setSpan(new RelativeSizeSpan(1.5f) , 0, d.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);  
+//				if(d != null ||v != ""){  
+//					sp.setSpan(new RelativeSizeSpan(0.75f), d.length()+1,(d+v).length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);  
+//		        } 
+	
+				textView.setText(d);
+				if(t.equals("0"))
+					textView.setTextColor(Color.parseColor("#545454"));
+				else
+					textView.setTextColor(Color.parseColor("#b9b9b9"));
+			}
 			return convertView;
 		}
 		
